@@ -1,30 +1,92 @@
+@import '../../utils/variables';
 .chatListContainer {
-    height: 100%;
-    width: 350px;
-    background: #c9e8e0;
-    background: linear-gradient(0deg, #c9e8e0 0%, #abe2c3 100%);
-    .profileContainer {
+  height: 100%;
+  width: 350px;
+  background: $primary-bg;
+  overflow-y: scroll;
+  
+  .profileContainer {
+    display: flex;
+    padding: 20px 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $primary-grey;
+    .profileDetails {
       display: flex;
-      padding: 10px;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #242424;
-      box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-      .profileDetails {
-        display: flex;
-        align-items: center;
-        img {
-          object-fit: cover;
-          border-radius: 5px;
+      img {
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      p {
+        margin-left: 10px;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+  }
+  .chatContainer {
+    display: flex;
+    padding: 10px;
+    height: 70px;
+    justify-content: space-between;
+    .chatProfileContainer {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .profileOverView {
+        margin: 0 10px;
+        overflow: hidden;
+        h3 {
+          font-weight: 500;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         p {
-          margin-left: 10px;
-          font-weight: 500;
-          font-size: 20px;
+          font-size: 12px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
-    @media screen and (max-width: 767px) {
-        width: 100%;
+    .chatNotificationContainer {
+      width: 70px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-size: 12px;
+        font-weight: 300;
       }
+      span {
+        width: 10px;
+        height: 10px;
+        background-color: $primary-green;
+        border-radius: 20px;
+        margin-top: 10px;
+      }
+    }
   }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  &::-webkit-scrollbar {
+    width: 2px;     
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-green;    
+    border-radius: 20px;    
+    border: 3px solid $primary-green;  
+  }
+  
+}
+

@@ -27,7 +27,7 @@ export default function Home() {
         </>
       )} */}
       <ChatsList />
-          <Chat />
+      <Chat />
 
     </div>
   );

@@ -1,5 +1,29 @@
+@import "../../utils/variables";
+
 .chatContainer {
-    height: 100%;
-    flex: 1;
-    background-color: rgb(39, 84, 123);
+  height: 100%;
+  flex: 1;
+  .header {
+    padding: 10px 20px;
+    border-bottom: 1px solid $primary-grey;
+    box-shadow: 0 5px 5px -3px $primary-grey;
+    .profileDetails {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .profileDetailsValues {
+        margin: 0 10px;
+        p{
+            font-size: 12px;
+            color: $primary-grey;
+        }
+      }
+    }
   }
+}
