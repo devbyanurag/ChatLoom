@@ -1,0 +1,30 @@
+.chatListContainer {
+    height: 100%;
+    width: 350px;
+    background: #c9e8e0;
+    background: linear-gradient(0deg, #c9e8e0 0%, #abe2c3 100%);
+    .profileContainer {
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #242424;
+      box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+      .profileDetails {
+        display: flex;
+        align-items: center;
+        img {
+          object-fit: cover;
+          border-radius: 5px;
+        }
+        p {
+          margin-left: 10px;
+          font-weight: 500;
+          font-size: 20px;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+  }
