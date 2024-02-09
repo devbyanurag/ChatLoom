@@ -1,0 +1,33 @@
+@import "../../utils/variables";
+
+.outgoingMsgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .outgoingMsg {
+      background-color: $primary-green;
+      width: fit-content;
+      padding: 15px 20px;
+      border-radius: 10px;
+      position: relative;
+      max-width: 90%;
+      box-shadow: 5px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      p {
+        color: white;
+      }
+      .msgshape {
+        background-color: $primary-green;
+        height: 50%;
+        width: 10px;
+        position: absolute;
+        right: 0%;
+        bottom: 0;
+      }
+    }
+
+    .msgOnlineStatus {
+      font-size: 10px;
+      color: $primary-grey;
+      margin: 7px;
+    }
+  }

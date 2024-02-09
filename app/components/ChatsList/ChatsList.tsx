@@ -14,6 +14,7 @@ const ChatsList = () => {
         </div>
         <img width="30" height="30" src="./setting.png" alt="settings--v1" />
       </div>
+      <div className={styles.chatsContainer}>
       {
         val.map(data => {
           return <div key={data} className={styles.chatContainer}>
@@ -31,6 +32,7 @@ const ChatsList = () => {
           </div>
         })
       }
+      </div>
 
 
     </div>
