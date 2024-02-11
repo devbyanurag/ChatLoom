@@ -23,6 +23,15 @@ const Chat = () => {
 
 
                 <IncomingMsg />
+                <IncomingMsg />
+                <IncomingMsg />
+                <IncomingMsg />
+                <IncomingMsg />
+                <IncomingMsg />
+                <IncomingMsg />
+                <IncomingMsg />
+                <IncomingMsg />
+              
             <OutgoingMsg/>
             </div>
             <div className={styles.footer}>
