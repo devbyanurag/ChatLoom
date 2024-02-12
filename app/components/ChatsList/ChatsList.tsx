@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./ChatsList.module.scss";
+import Image from 'next/image';
 
 
 const ChatsList = () => {
@@ -9,17 +10,17 @@ const ChatsList = () => {
     <div className={styles.chatListContainer}>
       <div className={styles.profileContainer}>
         <div className={styles.profileDetails} >
-          <img width="30" height="30" src={imgurl} alt="profile--v1" />
+          <Image width="30" height="30" src={imgurl} alt="profile--v1" />
           <p>Rohan Singh</p>
         </div>
-        <img width="30" height="30" src="./setting.png" alt="settings--v1" />
+        <Image width="30" height="30" src="./setting.png" alt="settings--v1" />
       </div>
       <div className={styles.chatsContainer}>
       {
         val.map(data => {
           return <div key={data} className={styles.chatContainer}>
             <div className={styles.chatProfileContainer}>
-              <img width="30" height="30" src={imgurl} alt="profile--v1" />
+              <Image width="30" height="30" src={imgurl} alt="profile--v1" />
               <div className={styles.profileOverView} >
                 <h3>Rishab</h3>
                 <p>Aaur bhai kya haal hai sb badiya hai naAaur bhai kya haal hai sb badiya hai naAaur bhai kya haal hai sb badiya hai naAaur bhai kya haal hai sb badiya hai na?</p>

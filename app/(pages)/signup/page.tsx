@@ -39,8 +39,8 @@ const Signup = () => {
                 </div> : <div className={styles.cardContainer} >
                     <h2>Almost there!</h2>
                     <p>Thank you for signing up! To complete your registration, please check your email inbox for a verification link.</p>
-                    <p>If you don't see the email within a few minutes, please check your spam folder.</p>
-                    <p>Once you've verified your email address, you'll be able to access all the features of our platform.</p>
+                    <p>If you don&apos;t see the email within a few minutes, please check your spam folder.</p>
+                    <p>Once you&apos;ve verified your email address, you&apos;ll be able to access all the features of our platform.</p>
                 </div>
             }
 
