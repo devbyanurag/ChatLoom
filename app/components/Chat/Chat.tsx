@@ -5,13 +5,12 @@ import OutgoingMsg from '../OutgoingMsg/OutgoingMsg';
 import Image from 'next/image';
 
 const Chat = () => {
-    const imgurl = "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     return (
         <div className={styles.chatContainer}>
 
             <div className={styles.header}>
                 <div className={styles.profileDetails}>
-                    <Image alt='img' src={imgurl} />
+                    <Image alt='img' src={'/profile12.jpg'} width={100} height={100} />
                     <div className={styles.profileDetailsValues}>
                         <h3>Zoro Tiwari</h3>
                         <p>Online</p>
@@ -39,7 +38,7 @@ const Chat = () => {
                 <input className={styles.inputText} type="text" placeholder='Type a message here...' />
 
                 <button className={styles.sendBtn}>
-                    <Image src={'./send.png'} alt='send' />
+                    <Image src={'/send.png'} alt='send' width={100} height={100} />
                 </button>
 
             </div>

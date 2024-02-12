@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Loading = () => {
   return (
-    <div className={styles.container}><Image alt='loading' src="load2ing.png" /></div>
+    <div className={styles.container}><Image alt='loading' src="/load2ing.png" height={200} width={200} /></div>
   )
 }
 

@@ -61,7 +61,7 @@ const Login = () => {
       });
 
       console.log(response.data);
-      dispatch(setUserData({ email: 'example@example.com', name: 'John Doe', id: '123' }));
+      dispatch(setUserData({ email: response.data.email, name:  response.data.name, id:  response.data.id }));
       // Redirect or set state as needed
     } catch (error: any) {
       if (error.response && error.response.data && error.response.data.message) {
