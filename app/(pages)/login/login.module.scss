@@ -30,6 +30,11 @@
                 border-bottom: 1px solid $primary-black;
             }
         }
+        .fgpass{
+            text-decoration: none;
+            color: $primary-green;
+            margin: 10px;
+        }
         .submitbtn{
             margin: 10px;
             button{
@@ -44,6 +49,7 @@
                 }
             }
         }
+        
         .naviText{
             display: flex;
             justify-content: center;
