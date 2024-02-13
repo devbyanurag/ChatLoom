@@ -5,6 +5,7 @@
   background: $primary-bg;
   overflow-y: scroll;
   border-right: 1px solid $primary-grey;
+  z-index: 1;
   .profileContainer {
     display: flex;
     padding: 20px 10px;
