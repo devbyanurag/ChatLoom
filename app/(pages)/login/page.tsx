@@ -9,6 +9,7 @@ import { useAppSelector } from '@/app/store/hooks';
 import { RootState } from '@/app/store/store';
 import { useDispatch } from 'react-redux';
 import { setUserData } from '@/app/store/slice/userSlice';
+import { useRouter } from 'next/navigation';
 
 interface LoginValue {
   email: string;
@@ -16,8 +17,8 @@ interface LoginValue {
 }
 
 const Login = () => {
-  const userDetails = useAppSelector((state: RootState) => state.user);
   const dispatch = useDispatch();
+  const router = useRouter()
   const [loading, setLoading] = useState<boolean>(false);
   const loginMockValue: LoginValue = {
     email: "anurag@gmail.com",
@@ -40,7 +41,8 @@ const Login = () => {
   };
 
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault()
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     try {
@@ -59,10 +61,9 @@ const Login = () => {
         email: loginValue.email,
         password: loginValue.password
       });
-
-      console.log(response.data);
-      dispatch(setUserData({ email: response.data.email, name:  response.data.name, id:  response.data.id }));
-      // Redirect or set state as needed
+      dispatch(setUserData({ email: response.data.email, name: response.data.name, id: response.data.id, isLoggedIn: true }));
+      localStorage.setItem('tokenchatloom',response.data.token)
+      router.push('/')
     } catch (error: any) {
       if (error.response && error.response.data && error.response.data.message) {
         console.log(error.response.data.message);
@@ -75,7 +76,6 @@ const Login = () => {
       setLoading(false)
 
     }
-
   }
 
   return (
@@ -95,7 +95,7 @@ const Login = () => {
         </div>
         <Link href={'/'} className={styles.fgpass}>Forget password?</Link>
         <div className={styles.submitbtn}>
-          <button onClick={handleLogin}>Login</button>
+          <button onClick={(e)=>{handleLogin(e)}} type='submit'>Login</button>
         </div>
         <div className={styles.naviText}>
           <p>Don&apos;t have a account? <Link href={'/signup'}>Signup</Link></p>
