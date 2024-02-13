@@ -5,14 +5,16 @@ import { RootState } from '../store';
 interface UserState {
   name: string | null,
   email: string | null,
-  id: string | null
+  id: string | null,
+  isLoggedIn: boolean
 }
 
 // Define the initial state using that type
 const initialState: UserState = {
   name: null,
   email: null,
-  id: null
+  id: null,
+  isLoggedIn: false
 }
 
 export const userSlice = createSlice({
@@ -20,9 +22,8 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     setUserData: (state, action: PayloadAction<UserState>) => {
-        console.log(action.payload)
       return { ...state, ...action.payload };
-    },
+    }
   },
 })
 
