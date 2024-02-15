@@ -14,7 +14,7 @@ import Loading from "../components/Loading/Loading";
 export default function Home() {
   const dispatch = useAppDispatch();
 
-
+  //for small devices
   const [isSmallDevice, setIsSmallDevice] = useState<boolean>(false);
   const user = useAppSelector((state) => state.user)
   const router = useRouter()
